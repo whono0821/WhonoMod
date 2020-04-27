@@ -32,14 +32,14 @@ public class BlockMetaCable extends BlockContainer {
 
     private static final int AMOUNT = 9;
 
-    private IIcon[] iconBlock = new IIcon[AMOUNT];
-    private IIcon[] iconItem = new IIcon[AMOUNT];
-    private IIcon[][] colored = new IIcon[4][16];
+    private final IIcon[] iconBlock = new IIcon[AMOUNT];
+    private final IIcon[] iconItem = new IIcon[AMOUNT];
+    private final IIcon[][] colored = new IIcon[4][16];
 
-    private float[] size = {0.3125f, 0.3125f, 0.3125f, 0.125f, 0.375f};
-    private String[] type = {"Tin", "Copper", "Gold", "Iron", "GlassFiber"};
-    private String[] covered = {"Covered", "Uncovered"};
-    private String[] color = {
+    private final float[] size = {0.3125f, 0.3125f, 0.3125f, 0.125f, 0.375f};
+    private final String[] type = {"Tin", "Copper", "Gold", "Iron", "GlassFiber"};
+    private final String[] covered = {"Covered", "Uncovered"};
+    private final String[] color = {
             "White", "Orange", "Magenta", "LightBlue",
             "Yellow", "Lime", "Pink", "Gray",
             "LightGray", "Cyan", "Purple", "Blue",

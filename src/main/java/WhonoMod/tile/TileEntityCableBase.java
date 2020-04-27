@@ -1,6 +1,7 @@
 package WhonoMod.tile;
 
 import WhonoMod.PowerSystem.PowerNetwork;
+import WhonoMod.PowerSystem.PowerVoltage;
 import WhonoMod.api.IPowerHandler;
 import WhonoMod.api.PowerStorage;
 import WhonoMod.api.PowerNetworkEvent.PowerNetworkLoadEvent;
@@ -14,10 +15,7 @@ import java.util.*;
 
 public class TileEntityCableBase extends TileEntity implements IPowerHandler {
 
-    private static final int[] POWER_CAPACITY_LEVEL = {20, 40, 80, 160, 320};
-    private static final int[] POWER_VOLTAGE_LEVEL = {32, 128, 512, 2048, Integer.MAX_VALUE};
-
-    private short type = 0;
+    private PowerVoltage voltage;
     private short color = 0;
 
     private TileEntityCableBase master;
@@ -99,8 +97,8 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
         super.writeToNBT(nbt);
 
         nbt.setBoolean("isMaster", isMaster);
-        nbt.setShort("Type", type);
         nbt.setShort("Color", color);
+        nbt.setInteger("Voltage", voltage.ordinal());
 
         if (isMaster) {
 
@@ -114,8 +112,8 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
         super.readFromNBT(nbt);
 
         isMaster = nbt.getBoolean("isMaster");
-        type = nbt.getShort("Type");
         color = nbt.getShort("Color");
+        voltage = PowerVoltage.getVoltageLevel(nbt.getInteger("Voltage"));
 
         if (isMaster) {
 
@@ -123,9 +121,25 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
         }
     }
 
+    private void setVoltage() {
+
+        int meta = getBlockMetadata();
+        switch (meta) {
+            case 0:
+            case 1: voltage = PowerVoltage.ULV; break;
+            case 2:
+            case 3: voltage = PowerVoltage.LV;  break;
+            case 4:
+            case 5: voltage = PowerVoltage.MV;  break;
+            case 6:
+            case 7: voltage = PowerVoltage.HV;  break;
+            case 8: voltage = PowerVoltage.EV;  break;
+        }
+    }
+
     public boolean canConnectNetwork(TileEntityCableBase cable) {
 
-        return this.type == cable.getType() && (this.color == 0 || this.color == cable.getColor());
+        return this.voltage == cable.getVoltage() && (this.color == 0 || this.color == cable.getColor());
     }
 
     public short getColor() {
@@ -133,9 +147,9 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
         return color;
     }
 
-    public short getType() {
+    public PowerVoltage getVoltage() {
 
-        return type;
+        return voltage;
     }
 
     private void setMaster(TileEntityCableBase master, int cables) {
@@ -148,9 +162,9 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
 
             if (power == null) {
 
-                power = new PowerStorage(POWER_CAPACITY_LEVEL[type], POWER_VOLTAGE_LEVEL[type]);
+                power = new PowerStorage(voltage.voltage * 4, voltage.voltage);
             }
-            power.setCapacity(POWER_CAPACITY_LEVEL[type] * cables);
+            power.setCapacity(voltage.voltage * 4 * cables);
         }
         else if (wasMaster) {
 
@@ -163,7 +177,7 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
 
         if(this.master == null || this.master.isInvalid()) {
 
-            type = (short)(worldObj.getBlockMetadata(xCoord, yCoord, zCoord) / 2);
+            setVoltage();
 
             Set<TileEntityCableBase> connectedCables = new HashSet<TileEntityCableBase>();
             Stack<TileEntityCableBase> traversingCables = new Stack<TileEntityCableBase>();
