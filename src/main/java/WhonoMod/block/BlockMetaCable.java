@@ -36,7 +36,7 @@ public class BlockMetaCable extends BlockContainer {
     private IIcon[] iconItem = new IIcon[AMOUNT];
     private IIcon[][] colored = new IIcon[4][16];
 
-    private float size[] = {0.3125f, 0.3125f, 0.3125f, 0.125f, 0.375f};
+    private float[] size = {0.3125f, 0.3125f, 0.3125f, 0.125f, 0.375f};
     private String[] type = {"Tin", "Copper", "Gold", "Iron", "GlassFiber"};
     private String[] covered = {"Covered", "Uncovered"};
     private String[] color = {
@@ -44,8 +44,6 @@ public class BlockMetaCable extends BlockContainer {
             "Yellow", "Lime", "Pink", "Gray",
             "LightGray", "Cyan", "Purple", "Blue",
             "Brown", "Green", "Red", "Black"};
-
-    private final Object CENTER_CABLE_HIT_MARKER = new Object();
 
     public BlockMetaCable() {
         super(Material.cloth);
@@ -106,7 +104,7 @@ public class BlockMetaCable extends BlockContainer {
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon  getItemIcon(int meta) {
+    public IIcon getItemIcon(int meta) {
 
         return iconItem[meta];
     }
@@ -199,7 +197,7 @@ public class BlockMetaCable extends BlockContainer {
         if (rayTraceResult != null && rayTraceResult.boundingBox != null) {
             AxisAlignedBB box = rayTraceResult.boundingBox;
 
-            return box.getOffsetBoundingBox((double)x, (double)y, (double)z);
+            return box.getOffsetBoundingBox(x, y, z);
         } else {
             return super.getSelectedBoundingBoxFromPool(world, x, y, z).expand(-0.8500000238418579D, -0.8500000238418579D, -0.8500000238418579D);
         }

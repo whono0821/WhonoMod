@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1942e45e-937b-4d5c-8fab-bacaa5d022e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WhonoMod.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhonoMod.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhonoMod.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhonoMod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WhonoMod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhonoMod.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WhonoMod.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/generator/BlockCreativeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/itemBlock/generator/ItemBlockCreativeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/generator/TileEntityCreativeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhonoMod.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WhonoMod.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/PowerSystem/PowerNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/PowerSystem/PowerNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/block/BlockMetaCable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/BlockMetaCable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/TileEntityCableBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/TileEntityCableBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/block/WMBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/WMBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/WMTileEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/WMTileEntities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,6 +311,14 @@
       <option name="presentableId" value="Default" />
       <updated>1587556854048</updated>
     </task>
+    <task id="LOCAL-00001" summary="ケーブル修正">
+      <created>1588005388051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588005388051</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -330,6 +335,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <MESSAGE value="ケーブル修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="ケーブル修正" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -341,45 +348,57 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587560201031" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587815418681">
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1588009776177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587815418681" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588009776177" />
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587557727316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587557727316" />
+    <state x="364" y="0" key="CommitChangelistDialog2" timestamp="1588005387192">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="364" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588005387192" />
     <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1587566514248">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587566514248" />
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1588005303136">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1588010246512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588005303136" />
-    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1588005303136">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
+    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1588010246512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588005303136" />
-    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1588005303136">
+    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
+    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1588010246512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588005303136" />
-    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1588005303136">
+    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1588010246512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588005303136" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
     <state x="0" y="60" key="SettingsEditor" timestamp="1587797357788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587797357788" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588005467415">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588005467415" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588005448494">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588005448494" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1587560015641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587560015641" />
-    <state x="120" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587631626218">
+    <state x="120" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588006757568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="120" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587631626218" />
+    <state x="120" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588006757568" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package WhonoMod.tile;
 
+import WhonoMod.tile.generator.TileEntityCreativeGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class WMTileEntities {
@@ -12,6 +13,7 @@ public class WMTileEntities {
         GameRegistry.registerTileEntity(TileEntityAssembler.class, "tileEntityAssembler");
         GameRegistry.registerTileEntity(TileEntityCableBase.class, "tileEntityCable");
         GameRegistry.registerTileEntity(TileEntityGenerator.class, "tileEntityGenerator");
+        GameRegistry.registerTileEntity(TileEntityCreativeGenerator.class, "tileEntityCreativeGenerator");
     }
 
     public static void init() {

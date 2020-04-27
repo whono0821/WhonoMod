@@ -1,5 +1,6 @@
 package WhonoMod.block;
 
+import WhonoMod.block.generator.BlockCreativeGenerator;
 import WhonoMod.fluid.BlockFluid;
 import WhonoMod.fluid.WMFluids;
 import net.minecraft.block.Block;
@@ -15,6 +16,8 @@ public class WMBlocks {
     public static Block rfMachine, rfMachine_on;
     public static Block assembler, assembler_on;
     public static Block generator;
+
+    public static Block creativeGenerator;
 
     public static Block cable;
 
@@ -34,6 +37,7 @@ public class WMBlocks {
         assembler = new BlockAssembler(false);
         assembler_on = new BlockAssembler(true);
         generator = new BlockGenerator();
+        creativeGenerator = new BlockCreativeGenerator();
 
         cable = new BlockMetaCable();
 
