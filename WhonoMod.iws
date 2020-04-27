@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1942e45e-937b-4d5c-8fab-bacaa5d022e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/generator/BlockCreativeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/itemBlock/generator/ItemBlockCreativeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/generator/TileEntityCreativeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/PowerSystem/PowerVoltage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhonoMod.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WhonoMod.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhonoMod.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WhonoMod.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/block/BlockMetaCable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/BlockMetaCable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/block/WMBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/WMBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/WMTileEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/tile/WMTileEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WhonoMod/block/generator/BlockCreativeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WhonoMod/block/generator/BlockCreativeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +91,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -318,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588005388051</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="クリエイティブ発電機の追加">
+      <created>1588011512631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588011512631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,7 +341,8 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <MESSAGE value="ケーブル修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="ケーブル修正" />
+    <MESSAGE value="クリエイティブ発電機の追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="クリエイティブ発電機の追加" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -356,38 +362,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1587557727316" />
-    <state x="364" y="0" key="CommitChangelistDialog2" timestamp="1588005387192">
+    <state x="364" y="0" key="CommitChangelistDialog2" timestamp="1588011511772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="364" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588005387192" />
+    <state x="364" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588011511772" />
     <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1587566514248">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587566514248" />
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1588010246512">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom" timestamp="1588011431752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
-    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1588010246512">
+    <state width="1493" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588011431752" />
+    <state width="1493" height="172" key="GridCell.Tab.0.center" timestamp="1588011431752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
-    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1588010246512">
+    <state width="1493" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588011431752" />
+    <state width="1493" height="172" key="GridCell.Tab.0.left" timestamp="1588011431752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
-    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1588010246512">
+    <state width="1493" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588011431752" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right" timestamp="1588011431752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588010246512" />
+    <state width="1493" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588011431752" />
     <state x="0" y="60" key="SettingsEditor" timestamp="1587797357788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="60" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587797357788" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588005467415">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588011531360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588005467415" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588011531360" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588005448494">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
