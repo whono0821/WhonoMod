@@ -22,7 +22,7 @@ import java.util.List;
 public class BlockCreativeGenerator extends BlockContainer {
 
     private static final int AMOUNT = 6;
-    private static final String[] VOLTAGE_NAME = {"ULV", "UV", "MV", "HV", "EV", "IV"};
+    private static final String[] VOLTAGE_NAME = {"ULV", "LV", "MV", "HV", "EV", "IV"};
     private final IIcon[] iconBlock = new IIcon[AMOUNT];
 
     public BlockCreativeGenerator() {
