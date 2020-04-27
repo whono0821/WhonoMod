@@ -4,6 +4,7 @@ import WhonoMod.api.IPowerConnection;
 import WhonoMod.api.IPowerProvider;
 import WhonoMod.api.IPowerReceiver;
 import WhonoMod.tile.TileEntityCable;
+import WhonoMod.tile.TileEntityCableBase;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -85,6 +86,15 @@ public class PowerNetwork {
                             if (tile instanceof TileEntityCable && bufTile instanceof TileEntityCable) {
 
                                 continue;
+                            }
+
+                            if (tile instanceof TileEntityCableBase && bufTile instanceof TileEntityCableBase) {
+
+                                TileEntityCableBase cable = (TileEntityCableBase)tile;
+                                TileEntityCableBase bufCable = (TileEntityCableBase)bufTile;
+
+                                if(cable.canConnectNetwork(bufCable) || cable.getPowerStored(ForgeDirection.UNKNOWN) > bufCable.getPowerStored(ForgeDirection.UNKNOWN))
+                                    continue;
                             }
 
                             if (bufTile instanceof IPowerProvider) {

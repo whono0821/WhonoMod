@@ -14,8 +14,8 @@ import java.util.*;
 
 public class TileEntityCableBase extends TileEntity implements IPowerHandler {
 
-    private static final int[] POWER_CAPACITY_LEVEL = {20, 40, 80, 160};
-    private static final int[] POWER_VOLTAGE_LEVEL = {32, 128, 512, 2048, -1};
+    private static final int[] POWER_CAPACITY_LEVEL = {20, 40, 80, 160, 320};
+    private static final int[] POWER_VOLTAGE_LEVEL = {32, 128, 512, 2048, Integer.MAX_VALUE};
 
     private short type = 0;
     private short color = 0;
@@ -85,7 +85,6 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
                 power = null;
             }
         }
-
     }
 
     @Override
@@ -183,7 +182,7 @@ public class TileEntityCableBase extends TileEntity implements IPowerHandler {
                 for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
 
                     TileEntity tile = worldObj.getTileEntity(cable.xCoord + dir.offsetX, cable.yCoord + dir.offsetY, cable.zCoord + dir.offsetZ);
-                    if (tile instanceof TileEntityCableBase) {
+                    if (tile instanceof TileEntityCableBase && !connectedCables.contains(tile)) {
 
                         TileEntityCableBase bufCable = (TileEntityCableBase)tile;
                         if (cable.canConnectNetwork(bufCable)) {
